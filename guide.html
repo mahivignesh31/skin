@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cure Guide - Skin Health Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add these new styles */
+        .guide-container {
+            max-width: 1200px;
+            margin: 120px auto 2rem;
+            padding: 2rem;
+            background: #f5f7fa;
+        }
+
+        .guide-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .guide-header h1 {
+            color: #1976d2;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .guide-header p {
+            color: #666;
+            font-size: 1.2rem;
+        }
+
+        .condition-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .condition-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .condition-card h3 {
+            color: #1976d2;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .condition-card h3::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #1976d2;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .severity-indicator {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+
+        .severity-high {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .severity-medium {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .severity-low {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .treatment-section {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #e3f2fd;
+        }
+
+        .treatment-section h4 {
+            color: #1976d2;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .symptoms-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.8rem;
+            position: relative;
+            color: #555;
+        }
+
+    
+
+        /* Add responsive search bar */
+        .search-container {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .search-bar {
+            width: 100%;
+            max-width: 600px;
+            padding: 1rem 1.5rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            transition: border-color 0.3s ease;
+            margin: 0 auto;
+        }
+
+        .search-bar:focus {
+            outline: none;
+            border-color: #1976d2;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <img src="logo.png" alt="Skin Health Hub Logo" style="height: 40px; margin-right: 10px;">
+                Skin Health Hub
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="predict.html">Predict</a></li>
+                <li><a href="guide.html" class="active">Cure Guide</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Add search bar in the guide-container -->
+        <div class="guide-container">
+            <div class="guide-header">
+                <h1>Skin Condition Guide</h1>
+                <p>Learn about different skin conditions, their symptoms, and treatment options</p>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search skin conditions...">
+            </div>
+
+            <!-- Add severity indicators to condition cards -->
+            <div class="condition-grid">
+                <div class="condition-card">
+                    <h3>Vascular Lesions</h3>
+                    <span class="severity-indicator severity-low">Low Risk</span>
+                    <p>Abnormalities of blood vessels that appear on or under the skin.</p>
+                    <ul class="symptoms-list">
+                        <li>Red or purple discoloration</li>
+                        <li>May be raised or flat</li>
+                        <li>Can appear anywhere on the body</li>
+                        <li>May cause discomfort or bleeding</li>
+                    </ul>
+                    <div class="treatment-section">
+                        <h4>Treatment Options</h4>
+                        <p>Laser therapy, sclerotherapy, or surgical removal depending on size and location.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <h3>Benign Keratosis-like Lesions</h3>
+                    <span class="severity-indicator severity-low">Low Risk</span>
+                    <p>Non-cancerous growths that commonly appear with age.</p>
+                    <ul class="symptoms-list">
+                        <li>Light brown to black in color</li>
+                        <li>Waxy, scaly appearance</li>
+                        <li>Looks "stuck on" the skin</li>
+                        <li>Can be slightly raised</li>
+                    </ul>
+                    <div class="treatment-section">
+                        <h4>Treatment Options</h4>
+                        <p>Usually no treatment needed. Can be removed for cosmetic reasons using cryotherapy or curettage.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <h3>Melanocytic Nevi</h3>
+                    <span class="severity-indicator severity-low">Low Risk</span>
+                    <p>Common moles that develop from melanocytes (pigment-producing cells).</p>
+                    <ul class="symptoms-list">
+                        <li>Brown or black in color</li>
+                        <li>Round or oval shape</li>
+                        <li>Usually smaller than 6mm</li>
+                        <li>Uniform in color and shape</li>
+                    </ul>
+                    <div class="treatment-section">
+                        <h4>Treatment Options</h4>
+                        <p>Regular monitoring recommended. Surgical removal if changes occur or for cosmetic reasons.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <h3>Dermatofibroma</h3>
+                    <span class="severity-indicator severity-low">Low Risk</span>
+                    <p>A common, harmless skin growth that most often appears on the legs.</p>
+                    <ul class="symptoms-list">
+                        <li>Round, raised growth</li>
+                        <li>Brown to pink in color</li>
+                        <li>Firm to the touch</li>
+                        <li>Usually small (3-10mm)</li>
+                    </ul>
+                    <div class="treatment-section">
+                        <h4>Treatment Options</h4>
+                        <p>Usually no treatment needed. Can be surgically removed if desired.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <h3>Melanoma</h3>
+                    <span class="severity-indicator severity-high">High Risk</span>
+                    <p>A serious form of skin cancer that begins in cells known as melanocytes.</p>
+                    <ul class="symptoms-list">
+                        <li>Asymmetrical moles or marks</li>
+                        <li>Irregular borders</li>
+                        <li>Varying colors within the same mole</li>
+                        <li>Diameter larger than 6mm</li>
+                        <li>Evolution or changes in size/shape</li>
+                    </ul>
+                    <div class="treatment-section">
+                        <h4>Treatment Options</h4>
+                        <p>Early detection is crucial. Treatment may include surgery, immunotherapy, or targeted therapy.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <h3>Basal Cell Carcinoma</h3>
+                    <span class="severity-indicator severity-high">High Risk</span>
+                    <p>The most common type of skin cancer, developing in the basal cells.</p>
+                    <ul class="symptoms-list">
+                        <li>Pearly, waxy bump</li>
+                        <li>Flat, flesh-colored or brown scar-like lesion</li>
+                        <li>Bleeding or scabbing sore</li>
+                        <li>Most common in sun-exposed areas</li>
+                    </ul>
+                    <div class="treatment-section">
+                        <h4>Treatment Options</h4>
+                        <p>Surgical removal, radiation therapy, or topical medications depending on size and location.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <h3>Actinic Keratoses</h3>
+                    <span class="severity-indicator severity-medium">Medium Risk</span>
+                    <p>A pre-cancerous condition characterized by rough, scaly patches on sun-exposed areas.</p>
+                    <ul class="symptoms-list">
+                        <li>Rough, dry, or scaly patches</li>
+                        <li>Pink or red coloration</li>
+                        <li>Itching or burning</li>
+                        <li>Most common on face, lips, ears</li>
+                    </ul>
+                    <div class="treatment-section">
+                        <h4>Treatment Options</h4>
+                        <p>Treatments include topical medications, cryotherapy, or photodynamic therapy.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add severity indicators to other cards similarly -->
+            </div>
+        </div>
+
+        <!-- Add this script at the end of the body -->
+        <script>
+            // Search functionality
+            const searchBar = document.querySelector('.search-bar');
+            const conditionCards = document.querySelectorAll('.condition-card');
+
+            searchBar.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                
+                conditionCards.forEach(card => {
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const content = card.textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || content.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        </script>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Skin Health Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
